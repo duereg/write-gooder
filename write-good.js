@@ -2,7 +2,10 @@ var checks = {
   weasels  : { fn: require('weasel-words'),            explanation: 'is a weasel word' },
   illusion : { fn: require('./lib/lexical-illusions'), explanation: 'is repeated' },
   so       : { fn: require('./lib/starts-with-so'),    explanation: 'adds no meaning' },
-  passive  : { fn: require('passive-voice'),           explanation: 'is passive voice' }
+  passive  : { fn: require('passive-voice'),           explanation: 'is passive voice' },
+  adverb   : { fn: require('adverb-where'),            explanation: 'is an adverb'},
+  complex  : { fn: require('word-complexity'),         explanation: 'could be written better.'},
+  readable : { fn: require('automated-readability-index'), explanation: 'is hard to read'}
 };
 
 module.exports = function (text, opts) {
