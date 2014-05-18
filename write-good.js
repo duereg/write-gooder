@@ -4,7 +4,7 @@ var checks = {
   so       : { fn: require('./lib/starts-with-so'),    explanation: 'adds no meaning' },
   passive  : { fn: require('passive-voice'),           explanation: 'is passive voice' },
   adverb   : { fn: require('adverb-where'),            explanation: 'is an adverb'},
-  complex  : { fn: require('word-complexity'),         explanation: 'could be written better.'},
+  complex  : { fn: require('word-complexity'),         explanation: 'is replaceable by simpler words.'},
   readable : { fn: require('automated-readability-index'), explanation: 'is hard to read'}
 };
 
