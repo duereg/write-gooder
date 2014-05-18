@@ -55,7 +55,8 @@ patterns.forEach(function (pattern) {
         if (suggestions.length) {
           console.log('In ' + file);
           console.log('=============');
-          console.log(suggestions);
+          // console.log(suggestions);
+          console.log(annotate(contents, suggestions).join('\n-------------\n'));
         }
       });
     }
