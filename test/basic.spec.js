@@ -95,12 +95,12 @@ describe('annotate', function () {
 
     expect(annotations[0]).toBe(
       'Remarkably few developers write well.\n' +
-      '^^^^^^^^^^\n' +
-      '"Remarkably" is a weasel word on line 1 at column 0');
+      '"Remarkably" is a weasel word\n' +
+      'line: 1, column: 0');
 
     expect(annotations[1]).toBe(
       'Remarkably few developers write well.\n' +
-      '           ^^^\n' +
-      '"few" is a weasel word on line 1 at column 11');
+      '"few" is a weasel word\n' +
+      'line: 1, column: 11');
   });
 });
