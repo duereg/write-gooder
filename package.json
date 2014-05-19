@@ -19,7 +19,7 @@
     "words"
   ],
   "author": "Brian Ford",
-  "contributors": "Matt Blair",
+  "contributors": ["Matt Blair"],
   "license": "MIT",
   "devDependencies": {
     "jasmine-node": "^1.14.3"
