@@ -1,6 +1,6 @@
 {
   "name": "write-gooder",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Naive linter for English prose",
   "main": "write-good.js",
   "bin": {
@@ -33,7 +33,6 @@
     "adverb-where": "~0.0.0",
     "word-complexity": "~0.0.0",
     "automated-readability-index": "~0.0.0",
-    "glob": "^3.2.9",
     "translocator": "^0.1.1"
   }
 }
