@@ -53,9 +53,7 @@ patterns.forEach(function (pattern) {
         var suggestions = writeGood(contents, opts);
 
         if (suggestions.length) {
-          console.log('In ' + file);
-          console.log('=============');
-          // console.log(suggestions);
+          console.log('[write-gooder ' + file + ']');
           console.log(annotate(contents, suggestions).join('\n-------------\n'));
         }
       });
