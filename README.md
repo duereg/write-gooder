@@ -58,12 +58,12 @@ $ write-good *.md
 In README.md
 =============
  = writeGood('So the cat was stolen.');
-                         ^^^^^^^^^^
-"was stolen" is passive voice on line 20 at column 40
+"was stolen" is passive voice
+line: 20, column: 40
 -------------
 //   suggestion: "'was stolen' is passive voice",
-                   ^^^^^^^^^^
-"was stolen" is passive voice on line 28 at column 19
+"was stolen" is passive voice
+line: 28, column: 19
 ```
 
 You can run just specific checks like this:
