@@ -7,17 +7,17 @@ A fork of [write-good](http://www.github.com/btford/write-good) by Brian Ford.
 ## Use
 
 ```shell
-npm install write-good
+npm install write-gooder
 ```
 
 ## API
 
-`writeGood` is a function that takes a string and returns an array of suggestions.
+`writeGooder` is a function that takes a string and returns an array of suggestions.
 
 ```javascript
-var writeGood = require('write-good');
+var writeGooder = require('write-gooder');
 
-var suggestions = writeGood('So the cat was stolen.');
+var suggestions = writeGooder('So the cat was stolen.');
 
 // suggestions:
 //
@@ -30,58 +30,58 @@ var suggestions = writeGood('So the cat was stolen.');
 // }]
 ```
 
-`writeGood` takes an optional second argument that allows you to disable certain checks.
+`writeGooder` takes an optional second argument that allows you to disable certain checks.
 
 You can disable checking for passive voice like this:
 
 ```javascript
-var writeGood = require('write-good');
+var writeGooder = require('write-gooder');
 
-var suggestions = writeGood('So the cat was stolen', { passive: false});
+var suggestions = writeGooder('So the cat was stolen', { passive: false});
 // suggestions: []
 ```
 
 
 ## CLI
 
-You can use `write-good` as a command-line tool by installing it globally:
+You can use `write-gooder` as a command-line tool by installing it globally:
 
 ```shell
-npm install -g write-good
+npm install -g write-gooder
 ```
 
-`write-good` takes a [glob](https://github.com/isaacs/node-glob) and prints suggestions to stdout:
+`write-gooder` takes a [glob](https://github.com/isaacs/node-glob) and prints suggestions to stdout:
 
 ```shell
-$ write-good *.md
+$ write-gooder *.md
 
 In README.md
 =============
- = writeGood('So the cat was stolen.');
+ = writeGooder('So the cat was stolen.');
 "was stolen" is passive voice
-line: 20, column: 40
+line 20 column 40
 -------------
 //   suggestion: "'was stolen' is passive voice",
 "was stolen" is passive voice
-line: 28, column: 19
+line 28 column 19
 ```
 
 You can run just specific checks like this:
 
 ```shell
-write-good *.md --weasel --so
+write-gooder *.md --weasel --so
 ```
 
 Or exclude checks like this:
 
 ```shell
-write-good *.md --no-passive
+write-gooder *.md --no-passive
 ```
 
 
 ## Checks
 
-You can disable any combination of the following by providing a key with value `false` as the second argument to `writeGood`.
+You can disable any combination of the following by providing a key with value `false` as the second argument to `writeGooder`.
 
 ### `passive`
 Checks for passive voice.
