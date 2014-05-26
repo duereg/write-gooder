@@ -1,4 +1,9 @@
-# write gooder [![Build Status](https://travis-ci.org/duereg/write-good.svg?branch=master)](https://travis-ci.org/duereg/write-good)
+[![Build Status](https://travis-ci.org/duereg/write-gooder.png)](https://travis-ci.org/duereg/write-gooder)
+[![Dependencies](https://david-dm.org/duereg/write-gooder.png)](https://david-dm.org/duereg/write-gooder)
+[![devDependencies](https://david-dm.org/duereg/write-gooder/dev-status.png)](https://david-dm.org/duereg/write-gooder#info=devDependencies&view=table)
+[![NPM version](https://badge.fury.io/js/write-gooder.svg)](http://badge.fury.io/js/write-gooder)
+
+# write gooder
 
 Naive linter for English prose for developers who can't write good and wanna do other stuff good too.
 
