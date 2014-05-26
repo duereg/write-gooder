@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/duereg/write-gooder.png)](https://travis-ci.org/duereg/write-gooder)
-[![Dependencies](https://david-dm.org/duereg/write-gooder.png)](https://david-dm.org/duereg/write-gooder)
-[![devDependencies](https://david-dm.org/duereg/write-gooder/dev-status.png)](https://david-dm.org/duereg/write-gooder#info=devDependencies&view=table)
+[![Build Status](https://travis-ci.org/duereg/write-good.png)](https://travis-ci.org/duereg/write-good)
+[![Dependencies](https://david-dm.org/duereg/write-good.png)](https://david-dm.org/duereg/write-good)
+[![devDependencies](https://david-dm.org/duereg/write-good/dev-status.png)](https://david-dm.org/duereg/write-good#info=devDependencies&view=table)
 [![NPM version](https://badge.fury.io/js/write-gooder.svg)](http://badge.fury.io/js/write-gooder)
 
 # write gooder
