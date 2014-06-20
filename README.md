@@ -15,6 +15,9 @@ A fork of [write-good](http://www.github.com/btford/write-good) by Brian Ford.
 npm install write-gooder
 ```
 
+**Important:** Do not use this tool to be a jerk to other people about their writing.
+
+
 ## API
 
 `writeGooder` is a function that takes a string and returns an array of suggestions.
@@ -96,6 +99,9 @@ Checks for lexical illusions – cases where a word is repeated.
 
 ### `so`
 Checks for `so` at the beginning of the sentence.
+
+### `thereIs`
+Checks for `there is` or `there are` at the beginning of the sentence.
 
 ### `weasel`
 Checks for "weasel words."
