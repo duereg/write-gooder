@@ -73,16 +73,36 @@ describe('writeGood', function () {
     ]);
   });
 
-  it('should detect sentences starting with "there is"', function () {
-    expect(writeGood('There is a use for this construction.')).toEqual([
-      { index: 0, offset: 8, reason: '"There is" is unnecessary verbiage' }
-    ]);
+  describe('sentences starting with "there is"', function() {
+    var errors;
+
+    beforeEach(function(){
+      errors = writeGood('There is a use for this construction.')
+    });
+
+    it('should fail validation', function(){
+      expect(errors.length).toEqual(1);
+    });
+
+    it('should give a reason for failure', function(){
+      expect(errors[0].reason).toEqual('"There is" is wordy or unneeded.')
+    });
   });
 
-  it('should detect sentences starting with "there is"', function () {
-    expect(writeGood('There are uses for this construction.')).toEqual([
-      { index: 0, offset: 9, reason: '"There are" is unnecessary verbiage' }
-    ]);
+  describe('sentences starting with "there are"', function() {
+    var errors;
+
+    beforeEach(function(){
+      errors = writeGood('There are a use for this construction.')
+    });
+
+    it('should fail validation', function(){
+      expect(errors.length).toEqual(1);
+    });
+
+    it('should give a reason for failure', function(){
+      expect(errors[0].reason).toEqual('"There are" is wordy or unneeded.')
+    });
   });
 
   it('should order suggestions by index', function () {
