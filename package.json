@@ -1,8 +1,12 @@
 {
   "name": "write-gooder",
-  "version": "0.5.12",
+  "version": "0.5.13",
   "description": "Naive linter for English prose",
   "main": "write-good.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duereg/write-gooder.git"
+  },
   "bin": {
     "write-gooder": "./bin/write-good.js"
   },
@@ -28,10 +32,10 @@
     "jasmine-node": "^1.14.3"
   },
   "dependencies": {
-    "passive-voice": "~0.0.0",
+    "passive-voice": "~0.1.0",
     "weasel-words": "~0.0.0",
     "adverb-where": "~0.0.0",
-    "too-wordy": "~0.0.0",
+    "too-wordy": "~0.1.0",
     "automated-readability-index": "~0.0.0",
     "translocator": "^0.1.1"
   }
