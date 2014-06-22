@@ -1,7 +1,7 @@
 {
   "name": "write-gooder",
-  "version": "0.5.13",
-  "description": "Naive linter for English prose",
+  "version": "0.5.14",
+  "description": "DEPRECATED - use write-good by btford instead",
   "main": "write-good.js",
   "repository": {
     "type": "git",
