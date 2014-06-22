@@ -85,7 +85,7 @@ describe('writeGood', function () {
     });
 
     it('should give a reason for failure', function(){
-      expect(errors[0].reason).toEqual('"There is" is wordy or unneeded.')
+      expect(errors[0].reason).toEqual('"There is" is wordy or unneeded')
     });
   });
 
@@ -101,7 +101,7 @@ describe('writeGood', function () {
     });
 
     it('should give a reason for failure', function(){
-      expect(errors[0].reason).toEqual('"There are" is wordy or unneeded.')
+      expect(errors[0].reason).toEqual('"There are" is wordy or unneeded')
     });
   });
 

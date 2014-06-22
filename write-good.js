@@ -2,9 +2,10 @@ var checks = {
   weasels  : { fn: require('weasel-words'),            explanation: 'is a weasel word' },
   illusion : { fn: require('./lib/lexical-illusions'), explanation: 'is repeated' },
   so       : { fn: require('./lib/starts-with-so'),    explanation: 'adds no meaning' },
+  thereIs  : { fn: require('./lib/there-is'),          explanation: 'is wordy or unneeded' },
   passive  : { fn: require('passive-voice'),           explanation: 'is passive voice' },
   adverb   : { fn: require('adverb-where'),            explanation: 'is an adverb'},
-  complex  : { fn: require('too-wordy'),               explanation: 'is wordy or unneeded.'},
+  complex  : { fn: require('too-wordy'),               explanation: 'is wordy or unneeded'},
   readable : { fn: require('automated-readability-index'), explanation: 'is hard to read'}
 };
 
