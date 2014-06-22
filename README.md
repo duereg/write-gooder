@@ -12,7 +12,7 @@ A fork of [write-good](http://www.github.com/btford/write-good) by Brian Ford.
 ## Use
 
 ```shell
-npm install write-gooder
+npm install duereg/write-gooder
 ```
 
 **Important:** Do not use this tool to be a jerk to other people about their writing.
@@ -48,7 +48,6 @@ var writeGooder = require('write-gooder');
 var suggestions = writeGooder('So the cat was stolen', { passive: false});
 // suggestions: []
 ```
-
 
 ## CLI
 
@@ -86,30 +85,10 @@ Or exclude checks like this:
 write-gooder *.md --no-passive
 ```
 
-
-## Checks
-
-You can disable any combination of the following by providing a key with value `false` as the second argument to `writeGooder`.
-
-### `passive`
-Checks for passive voice.
-
-### `illusion`
-Checks for lexical illusions – cases where a word is repeated.
-
-### `so`
-Checks for `so` at the beginning of the sentence.
-
-### `thereIs`
-Checks for `there is` or `there are` at the beginning of the sentence.
-
-### `weasel`
-Checks for "weasel words."
-
-
 ## See also
 
 I came across these resources while doing research to make this module.
+
 They might be helpful.
 
 ### Code
