@@ -1,6 +1,6 @@
 {
   "name": "write-gooder",
-  "version": "0.5.14",
+  "version": "0.5.15",
   "description": "DEPRECATED - use write-good by btford instead",
   "main": "write-good.js",
   "repository": {
@@ -26,7 +26,9 @@
     "grammar"
   ],
   "author": "Brian Ford",
-  "contributors": ["Matt Blair"],
+  "contributors": [
+    "Matt Blair"
+  ],
   "license": "MIT",
   "devDependencies": {
     "jasmine-node": "^1.14.3"
