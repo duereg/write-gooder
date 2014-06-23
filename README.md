@@ -16,7 +16,6 @@ npm install duereg/write-gooder
 
 **Important:** Do not use this tool to be a jerk to other people about their writing.
 
-
 ## API
 
 `writeGooder` is a function that takes a string and returns an array of suggestions.
