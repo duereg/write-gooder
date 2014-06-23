@@ -53,7 +53,7 @@ var suggestions = writeGooder('So the cat was stolen', { passive: false});
 You can use `write-gooder` as a command-line tool by installing it globally:
 
 ```shell
-npm install -g write-gooder
+npm install -g duereg/write-gooder
 ```
 
 `write-gooder` takes a [glob](https://github.com/isaacs/node-glob) and prints suggestions to stdout:
@@ -83,34 +83,6 @@ Or exclude checks like this:
 ```shell
 write-gooder *.md --no-passive
 ```
-
-## See also
-
-I came across these resources while doing research to make this module.
-
-They might be helpful.
-
-### Code
-
-* [shell script for avoiding "weasel words"](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/) – I based my initial implementation on this
-* [Academic Writing Check](https://github.com/devd/Academic-Writing-Check) – a perl script similar to above
-* [writegood mode](https://github.com/bnbeckwith/writegood-mode) for emacs
-* [natural](https://github.com/NaturalNode/natural) – general purpose NLP toolkit in JavaScript
-* [WordNet](http://wordnet.princeton.edu/) – lexical database of the English language
-
-### Prose
-
-* [Elements of Style](http://www.bartleby.com/141/)
-* [Flesch–Kincaid readability](http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_test)
-* [Fear and Loathing of the English passive](http://www.lel.ed.ac.uk/~gpullum/passive_loathing.pdf)
-
-### Apps
-
-This is not an endorsement.
-These apps have similar functionality that you may find useful.
-
-* [Hemingway App](http://www.hemingwayapp.com/)
-* [Nitpicker](http://nitpickertool.com)
 
 ## License
 MIT
