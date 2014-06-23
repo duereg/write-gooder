@@ -63,7 +63,7 @@ describe('writeGood', function () {
   });
 
   it('should not detect words starting with "so"', function () {
-    expect(writeGood('Some sausages start sentences simply stating so.')).toEqual([]);
+    expect(writeGood('Some sausages start sentences stating so.')).toEqual([]);
     expect(writeGood('Sorry, everyone.')).toEqual([]);
   });
 
