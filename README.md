@@ -37,17 +37,6 @@ var suggestions = writeGooder('So the cat was stolen.');
 // }]
 ```
 
-`writeGooder` takes an optional second argument that allows you to disable certain checks.
-
-You can disable checking for passive voice like this:
-
-```javascript
-var writeGooder = require('write-gooder');
-
-var suggestions = writeGooder('So the cat was stolen', { passive: false});
-// suggestions: []
-```
-
 ## CLI
 
 You can use `write-gooder` as a command-line tool by installing it globally:
