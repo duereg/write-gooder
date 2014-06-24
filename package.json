@@ -37,6 +37,7 @@
     "passive-voice": "~0.1.0",
     "weasel-words": "~0.0.0",
     "adverb-where": "~0.0.0",
+    "no-cliches": "~0.0.0",
     "too-wordy": "~0.1.0",
     "automated-readability-index": "~0.0.0",
     "translocator": "^0.1.1"

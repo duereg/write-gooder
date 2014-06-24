@@ -73,6 +73,18 @@ describe('writeGood', function () {
     ]);
   });
 
+  describe('sentences where a word will trigger multiple suggestions', function() {
+    var errors;
+
+    beforeEach(function(){
+      errors = writeGood('This sentence is extremely good.')
+    });
+
+    it('should fail validation only once', function(){
+      expect(errors.length).toEqual(1);
+    });
+  });
+
   describe('sentences starting with "there is"', function() {
     var errors;
 

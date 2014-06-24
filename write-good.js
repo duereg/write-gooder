@@ -4,7 +4,7 @@ var checks = {
   so       : { fn: require('./lib/starts-with-so'),    explanation: 'adds no meaning' },
   thereIs  : { fn: require('./lib/there-is'),          explanation: 'is wordy or unneeded' },
   passive  : { fn: require('passive-voice'),           explanation: 'is passive voice' },
-  adverb   : { fn: require('adverb-where'),            explanation: 'is an adverb'},
+  adverb   : { fn: require('adverb-where'),            explanation: 'can weaken meaning'},
   complex  : { fn: require('too-wordy'),               explanation: 'is wordy or unneeded'},
   readable : { fn: require('automated-readability-index'), explanation: 'is hard to read'}
 };
@@ -19,7 +19,7 @@ module.exports = function (text, opts) {
     }
   });
 
-  return suggestions.sort(function (a, b) {
+  return dedup(suggestions).sort(function (a, b) {
     return a.index < b.index ? -1 : 1;
   });
 
@@ -30,6 +30,21 @@ module.exports = function (text, opts) {
           '" ' + reason;
       return suggestion;
     };
+  }
+
+  function dedup (suggestions) {
+    var dupsHash = {},
+        uniqSuggestions = [];
+
+    suggestions.forEach(function(suggestion) {
+      var key = suggestion.index + ":" + suggestion.offset;
+      if (!dupsHash[key]) {
+        dupsHash[key] = true;
+        uniqSuggestions.push(suggestion);
+      }
+    });
+
+    return uniqSuggestions;
   }
 };
 
