@@ -1,6 +1,6 @@
 {
   "name": "write-gooder",
-  "version": "0.5.15",
+  "version": "0.5.16",
   "description": "DEPRECATED - use write-good by btford instead",
   "main": "write-good.js",
   "repository": {
