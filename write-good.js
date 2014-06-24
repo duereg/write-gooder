@@ -6,7 +6,8 @@ var checks = {
   passive  : { fn: require('passive-voice'),           explanation: 'is passive voice' },
   adverb   : { fn: require('adverb-where'),            explanation: 'can weaken meaning'},
   complex  : { fn: require('too-wordy'),               explanation: 'is wordy or unneeded'},
-  readable : { fn: require('automated-readability-index'), explanation: 'is hard to read'}
+  readable : { fn: require('automated-readability-index'), explanation: 'is hard to read'},
+  cliches  : { fn: require('no-cliches'),              explanation: 'is a cliche'}
 };
 
 module.exports = function (text, opts) {
