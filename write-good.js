@@ -34,18 +34,16 @@ module.exports = function (text, opts) {
   }
 
   function dedup (suggestions) {
-    var dupsHash = {},
-        uniqSuggestions = [];
+    var dupsHash = {}
 
-    suggestions.forEach(function(suggestion) {
+    return suggestions.reduce(function(memo, suggestion) {
       var key = suggestion.index + ":" + suggestion.offset;
       if (!dupsHash[key]) {
         dupsHash[key] = true;
-        uniqSuggestions.push(suggestion);
+        memo.push(suggestion);
       }
-    });
-
-    return uniqSuggestions;
+      return memo;
+    }, []);
   }
 };
 

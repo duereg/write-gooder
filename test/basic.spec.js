@@ -73,48 +73,28 @@ describe('writeGood', function () {
     ]);
   });
 
-  describe('sentences where a word will trigger multiple suggestions', function() {
-    var errors;
-
-    beforeEach(function(){
-      errors = writeGood('This sentence is extremely good.')
-    });
-
-    it('should fail validation only once', function(){
-      expect(errors.length).toEqual(1);
-    });
+  it('should detect sentences with common adverbs', function() {
+    expect(writeGood('This sentence is simply terrible')).toEqual([
+      { index: 17, offset: 6, reason: '"simply" can weaken meaning' }
+    ])
   });
 
-  describe('sentences starting with "there is"', function() {
-    var errors;
-
-    beforeEach(function(){
-      errors = writeGood('There is a use for this construction.')
-    });
-
-    it('should fail validation', function(){
-      expect(errors.length).toEqual(1);
-    });
-
-    it('should give a reason for failure', function(){
-      expect(errors[0].reason).toEqual('"There is" is wordy or unneeded')
-    });
+  it('should fail validation once for terms that trigger multiple suggestions', function() {
+    expect(writeGood('This sentence is extremely good.')).toEqual([
+      { index : 17, offset : 9, reason : '"extremely" is a weasel word' }
+    ]);
   });
 
-  describe('sentences starting with "there are"', function() {
-    var errors;
+  it('should detect sentences starting with "there is"', function () {
+    expect(writeGood('There is a use for this construction.')).toEqual([
+      { index: 0, offset: 8, reason: '"There is" is wordy or unneeded' }
+    ]);
+  });
 
-    beforeEach(function(){
-      errors = writeGood('There are a use for this construction.')
-    });
-
-    it('should fail validation', function(){
-      expect(errors.length).toEqual(1);
-    });
-
-    it('should give a reason for failure', function(){
-      expect(errors[0].reason).toEqual('"There are" is wordy or unneeded')
-    });
+  it('should detect sentences starting with "there are"', function () {
+    expect(writeGood('There are uses for this construction.')).toEqual([
+      { index: 0, offset: 9, reason: '"There are" is wordy or unneeded' }
+    ]);
   });
 
   it('should order suggestions by index', function () {
